@@ -1,5 +1,7 @@
 # NS API Project
 
+**Live demo:** https://anneb.github.io/ns-api-demo/
+
 Working with the Nederlandse Spoorwegen (NS) public API: train locations, timetables, routes/stations, disruptions/delays.
 
 ## Auth / how to get access (from Starter's Guide)
