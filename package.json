@@ -1,0 +1,22 @@
+{
+  "name": "nsapi-map",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "fetch:tracks": "tsx scripts/fetch-spoorkaart.ts",
+    "fetch:stations": "tsx scripts/fetch-stations.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "maplibre-gl": "^5.24.0"
+  }
+}

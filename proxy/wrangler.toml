@@ -1,0 +1,5 @@
+name = "nsapi-vehicle-proxy"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+# Set the real key with: wrangler secret put NS_API_SUBSCRIPTION_KEY
