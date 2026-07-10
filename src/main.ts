@@ -18,7 +18,7 @@ interface Journey {
 const uicToStationCode = new Map<string, string>();
 
 async function loadStationCodeLookup() {
-  const res = await fetch("/data/stations.geojson");
+  const res = await fetch(`${import.meta.env.BASE_URL}data/stations.geojson`);
   const geojson = (await res.json()) as GeoJSON.FeatureCollection;
   for (const f of geojson.features) {
     const p = f.properties as { code: string; uicCode: string };
@@ -65,7 +65,7 @@ function emptyFeatureCollection() {
 }
 
 map.on("load", async () => {
-  map.addSource("tracks", { type: "geojson", data: "/data/spoorkaart.geojson" });
+  map.addSource("tracks", { type: "geojson", data: `${import.meta.env.BASE_URL}data/spoorkaart.geojson` });
   map.addLayer({
     id: "tracks-line",
     type: "line",
@@ -73,7 +73,7 @@ map.on("load", async () => {
     paint: { "line-color": "#888", "line-width": 1 },
   });
 
-  map.addSource("stations", { type: "geojson", data: "/data/stations.geojson" });
+  map.addSource("stations", { type: "geojson", data: `${import.meta.env.BASE_URL}data/stations.geojson` });
   map.addLayer({
     id: "stations-point",
     type: "circle",
